@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <!-- Title and Icon -->
+
+        <title>Zemo An Interface to Improve Video Interview Experience</title>
+        <link rel="shortcut icon" href="../images/logo.svg" />
+        <link rel="apple-touch-icon" href="../images/logo.svg" />
+
+        <!-- Meta Information -->
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- StyleSheet -->
+
+        <link rel="stylesheet" href="../css/landing.css" />
+        <link rel="stylesheet" href="../css/newcall.css" />
+    </head>
+    <body class="has-animations">
+        <div class="body-wrap">
+            <header class="site-header reveal-from-top">
+                <div class="container">
+                    <div class="site-header-inner">
+                        <div class="brand">
+                            <div class="m-0">
+                                <a href="/"><img src="../images/logo.svg" alt="Neon" width="32" height="32" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="site-content">
+                <section class="hero section illustration-section-01">
+                    <div class="container">
+                        <div class="hero-inner section-inner">
+                            <div class="split-wrap invert-mobile">
+                                <div class="split-item">
+                                    <div class="hero-content split-item-content center-content-mobile">
+                                        <h1 class="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="150">
+                                            Pick name. <br />
+                                            Share URL. <br />
+                                            Start conference.
+                                        </h1>
+                                        <p class="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="300">
+                                            Each room has its disposable URL. Just pick a room name and share your
+                                            custom URL. It's that easy.
+                                        </p>
+                                    </div>
+                                    <style>
+                                        @media (min-width: 641px) {
+                                            .hero .split-wrap .split-item {
+                                                min-height: 492px;
+                                            }
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cta section center-content-mobile reveal-from-bottom">
+                    <div class="container">
+                        <div class="cta-inner section-inner cta-split br-12">
+                            <div class="cta-slogan">
+                                <h3 class="m-0">
+                                    Pick a room name.<br />
+                                    How about this one?
+                                </h3>
+                            </div>
+                            <div class="cta-action">
+                                <div class="mb-24">
+                                    <label class="form-label screen-reader" for="roomName"></label>
+                                    <div class="form-group-desktop">
+                                        <input
+                                            class="form-input"
+                                            type="text"
+                                            id="roomName"
+                                            style="border-radius: 6px"
+                                        />
+                                        <button
+                                            id="joinRoomButton"
+                                            class="button button-primary br-6 pulse"
+                                            onclick="joinRoom()"
+                                        >
+                                            Join Room
+                                        </button>
+                                        <script>
+                                            document.getElementById('roomName').onkeyup = (e) => {
+                                                if (e.keyCode === 13) {
+                                                    e.preventDefault();
+                                                    joinRoom();
+                                                }
+                                            };
+                                            function joinRoom() {
+                                                let roomName = document.getElementById('roomName').value;
+                                                window.location.href = '/join/' + roomName;
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script defer src="../js/landing.js"></script>
+        <script defer src="../js/newRoom.js"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
+</html>

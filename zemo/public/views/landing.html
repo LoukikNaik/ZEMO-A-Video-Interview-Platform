@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <!-- Title and Icon -->
+
+        <title>Zemo An Interface to Improve Video Interview Experience</title>
+        <link rel="shortcut icon" href="../images/logo.svg" />
+        <link rel="apple-touch-icon" href="../images/logo.svg" />
+
+        <!-- Meta Information -->
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- StyleSheet -->
+
+        <link rel="stylesheet" href="../css/landing.css" />
+        <link rel="stylesheet" href="../css/newcall.css" />
+    </head>
+    <body class="has-animations">
+        <div class="body-wrap">
+            <header class="site-header reveal-from-top">
+                <div class="container">
+                    <div class="site-header-inner">
+                        <div class="brand">
+                            <div class="m-0">
+                                <a href="/"><img src="../images/logo.svg" alt="Neon" width="32" height="32" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="site-content">
+                <section class="hero section illustration-section-01">
+                    <div class="container">
+                        <div class="hero-inner section-inner">
+                            <div class="split-wrap invert-mobile">
+                                <div class="split-item">
+                                    <div class="hero-content split-item-content center-content-mobile">
+                                        <h1 class="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="150">
+                                            Zemo<br /> An Interface to Improve Video Interview Experience<br />
+                                            Simple, Secure, Fast.
+                                        </h1>
+                                        <p class="mt-0 mb-32 reveal-from-bottom" data-reveal-delay="300">
+                                            Start your next video call with a single click. No download, plug-in, or
+                                            login is required. Just get straight to talking, messaging, and sharing your
+                                            screen.
+                                        </p>
+                                    </div>
+                                    <style>
+                                        @media (min-width: 641px) {
+                                            .hero .split-wrap .split-item {
+                                                min-height: 492px;
+                                            }
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cta section center-content-mobile reveal-from-bottom">
+                    <div class="container">
+                        <div class="cta-inner section-inner cta-split br-12">
+                            <div class="cta-slogan">
+                                <h3 class="m-0">
+                                    Pick a room name.<br />
+                                    How about this one?
+                                </h3>
+                            </div>
+                            <div class="cta-action">
+                                <div class="mb-24">
+                                    <label class="form-label screen-reader" for="roomName"></label>
+                                    <div class="form-group-desktop">
+                                        <input
+                                            class="form-input"
+                                            type="text"
+                                            id="roomName"
+                                            style="border-radius: 6px"
+                                        />
+                                        <button
+                                            id="joinRoomButton"
+                                            class="button button-primary br-6 pulse"
+                                            onclick="joinRoom()"
+                                        >
+                                            Join Room
+                                        </button>
+                                        <script>
+                                            document.getElementById('roomName').onkeyup = (e) => {
+                                                if (e.keyCode === 13) {
+                                                    e.preventDefault();
+                                                    joinRoom();
+                                                }
+                                            };
+                                            function joinRoom() {
+                                                let roomName = document.getElementById('roomName').value;
+                                                window.location.href = '/join/' + roomName;
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="features-tiles section center-content">
+                    <div class="container">
+                        <div class="features-tiles-inner section-inner has-top-divider">
+                            <div class="tiles-wrap">
+                                <div class="tiles-item reveal-from-right">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-02.svg"
+                                                    alt="Screen Sharing"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Screen Sharing</h4>
+                                            <p class="m-0 text-sm">
+                                                Share your screen, application window, present your documents, slides
+                                                and more. Up to 4k resolution and speed up to 60fps.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-left">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-04.svg"
+                                                    alt="WebCam Streaming"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">WebCam Streaming</h4>
+                                            <p class="m-0 text-sm">
+                                                Having the webcam on, allows participants to make a deeper connection
+                                                with you. Up to 4k resolution and speed up to 60fps.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-right">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-01.svg"
+                                                    alt="Chat Room"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Chat Room</h4>
+                                            <p class="m-0 text-sm">
+                                                Chat with others in the meeting, either public chat or private, save the
+                                                meeting messages. An integrated emoji picker to show your feeling.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-left">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-03.svg"
+                                                    alt="Meeting Recording"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Meeting Recording</h4>
+                                            <p class="m-0 text-sm">
+                                                Record your Screen, WebCam and Audio. Save it for use in the future or
+                                                to share with others.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-right">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-06.svg"
+                                                    alt="Interactive Whiteboard"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Interactive Whiteboard</h4>
+                                            <p class="m-0 text-sm">
+                                                Advanced collaborative whiteboard to draw and explain your concepts to
+                                                the other participants in the meeting.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-left">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-02.svg"
+                                                    alt="File Sharing"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">File Sharing</h4>
+                                            <p class="m-0 text-sm">
+                                                Share any types of files to all participants in the meeting, in total
+                                                security, thanks to Datagram Transport Layer Security (DTLS).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-right">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-05.svg"
+                                                    alt="Total Privacy"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Total Privacy</h4>
+                                            <p class="m-0 text-sm">
+                                                Data stays between you and your participants. Zemo doesn't collect
+                                                or share personal information. It's built for privacy first.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tiles-item reveal-from-left">
+                                    <div class="tiles-item-inner">
+                                        <div class="features-tiles-item-header">
+                                            <div class="features-tiles-item-image mb-16">
+                                                <img
+                                                    src="../images/feature-tile-icon-05.svg"
+                                                    alt="Maximum Security"
+                                                    width="72"
+                                                    height="72"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="features-tiles-item-content">
+                                            <h4 class="mt-0 mb-8">Maximum Security</h4>
+                                            <p class="m-0 text-sm">
+                                                End-to-end state-of-the-art encryption means your participants are
+                                                exactly that. Your calls.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script defer src="../js/landing.js"></script>
+        <script defer src="../js/newRoom.js"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
+</html>
